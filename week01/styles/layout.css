@@ -1,0 +1,92 @@
+/* Reset default spacing for the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: #f4f4f4;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    background: #333;
+    padding: 1.5rem 2rem 1rem;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+nav {
+    background: #111;
+    padding: 0.85rem 1.25rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    min-height: calc(100vh - 12rem);
+    background: #d3d3d3;
+}
+
+main section {
+    background: #d3d3d3;
+    padding: 2rem;
+}
+
+main section h2 {
+    color: #222;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+main aside {
+    background: #fff;
+    color: #222;
+    padding: 2rem;
+}
+
+main aside h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background: #333;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
