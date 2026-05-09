@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+    <rect width="400" height="240" rx="24" fill="#2d6aab" />
+    <rect x="32" y="32" width="336" height="176" rx="16" fill="#fff" />
+    <text x="50%" y="80" fill="#2d6aab" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Course
+        Highlights</text>
+    <circle cx="90" cy="150" r="24" fill="#2d6aab" />
+    <rect x="130" y="130" width="192" height="20" rx="10" fill="#2d6aab" />
+    <rect x="130" y="162" width="160" height="16" rx="8" fill="#2d6aab" />
+</svg>
