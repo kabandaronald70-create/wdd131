@@ -1,0 +1,49 @@
+/* ---------------------------------
+   LARGE VIEW (≥768px)
+   Overrides mobile styles for hamburger & grid
+---------------------------------- */
+
+/* Hide hamburger button on larger screens */
+.hamburger-btn {
+  display: none !important;
+}
+
+/* Always show navigation menu as flex row */
+.main-nav {
+  display: flex !important;
+  width: auto;
+  margin-top: 0;
+}
+
+.nav-menu {
+  flex-direction: row;
+  gap: 0.8rem;
+  background-color: transparent;
+  padding: 0;
+}
+
+.nav-link {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  background-color: #d4a5d4;
+  transform: translateY(-2px);
+}
+
+/* Grid layout: 3 columns on large screens */
+.temple-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Slight increase in main content max-width */
+.main-content {
+  max-width: 1300px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+}
