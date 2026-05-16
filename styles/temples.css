@@ -204,3 +204,15 @@ a:focus-visible, button:focus-visible {
   outline: 2px solid #6c757d;
   outline-offset: 3px;
 }
+
+/* Responsive layout using media query */
+@media (min-width: 768px) {
+  .main-content {
+    padding: 0 2rem;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
