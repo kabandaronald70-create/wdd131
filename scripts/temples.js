@@ -53,4 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Close menu when a nav link is clicked
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 768) {
+      mainNav.classList.remove('show');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+      hamburgerBtn.textContent = '☰';
+    }
+  });
+});
 });
