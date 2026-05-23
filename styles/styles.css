@@ -218,4 +218,9 @@ footer {
         content: " ☀️";
     }
 
+    /* HIDE SVG ON DESKTOP */
+
+    .weather-icon {
+        display: none;
+    }
 }
