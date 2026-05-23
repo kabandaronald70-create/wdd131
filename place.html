@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Uganda</title>
+
+    <meta name="description"
+        content="A responsive webpage about Uganda featuring country information, weather, and responsive navigation.">
+
+    <meta name="author" content="Ronald Kabanda">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Uganda</h1>
+
+        <!-- Hamburger Button -->
+        <button id="menu" aria-label="Menu"></button>
+
+        <!-- Navigation -->
+        <nav>
+
+            <ul class="navigation">
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">Places</a></li>
+
+                <li><a href="#">Weather</a></li>
+
+                <li><a href="#">Culture</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Hero Image -->
+        <picture>
+
+            <source media="(min-width: 768px)" srcset="images/kampala.webp">
+
+            <img src="images/kampala.webp" alt="Beautiful scenery in Uganda">
+
+        </picture>
+
+        <!-- Data Card -->
+        <section class="card data">
+
+            <h2>Data</h2>
+
+            <p><strong>Area:</strong> 241,038 km²</p>
+
+            <p><strong>Population:</strong> Approximately 50 Million</p>
+
+            <p><strong>Capital:</strong> Kampala</p>
+
+            <p><strong>Languages:</strong> English, Kiswahili</p>
+
+            <p><strong>Currency:</strong> Canadian Dollar</p>
+
+            <p><strong>Time Zone:</strong> UTC+03:00 (EAT)</p>
+
+            <p><strong>Calling Code:</strong> +256</p>
+
+            <p><strong>Internet TLD:</strong> <div class="ug"></div></p>
+
+        </section>
+
+        <!-- Weather Card -->
+        <section class="card weather">
+
+            <h2>Weather</h2>
+
+            <img src="images/weather-icon.svg" alt="Weather icon" class="weather-icon">
+
+            <p><strong>Temperature:</strong>
+                <span id="temp">24</span> °C
+            </p>
+
+            <p><strong>Conditions:</strong> Sunny / Partly Cloudy</p>
+
+            <p><strong>Wind:</strong>
+                <span id="speed">15</span> km/h
+            </p>
+
+            <p><strong>Wind Chill:</strong>
+                <span id="windchill"></span>
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </div>
+</footer>
+
+</body>
+
+</html>

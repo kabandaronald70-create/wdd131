@@ -1,0 +1,226 @@
+:root {
+    --accent2-color: #c00000;
+    --accent1-color: #006400;
+    --light-color: #ffffff;
+    --accent3-color: #eaee07;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: white;
+}
+
+/* HEADER */
+
+header {
+    background-color:black;
+    color: var(--light-color);
+    padding: 1rem;
+}
+
+/* HEADER TOP */
+
+header h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HAMBURGER BUTTON */
+
+#menu {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+/* NAVIGATION LIST */
+
+.navigation {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+}
+
+/* OPEN MENU */
+
+.navigation.open {
+    display: flex;
+}
+
+/* X BUTTON */
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* NAV LINKS */
+
+.navigation a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: var(--accent2-color);
+}
+
+/* MAIN */
+
+main {
+    position: relative;
+}
+
+/* HERO IMAGE */
+
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CARDS */
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    border-radius: 8px;
+}
+
+/* CARD HEADINGS */
+
+.card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* CARD TEXT */
+
+.card p {
+    margin: 0.7rem 0;
+    font-size: 1rem;
+}
+
+/* WEATHER ICON */
+
+.weather-icon {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--accent2-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1rem;
+}
+
+/* LARGE VIEW */
+
+@media screen and (min-width: 768px) {
+
+    /* HEADER LAYOUT */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+    }
+
+    /* HIDE HAMBURGER */
+
+    #menu {
+        display: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    /* CARDS OVER IMAGE */
+
+    .card {
+        position: absolute;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .data {
+        top: 40px;
+        left: 20px;
+    }
+
+    .weather {
+        bottom: 40px;
+        right: 20px;
+    }
+
+    /* CARD HEADERS */
+
+    .card h2 {
+        background-color: var(--accent3-color);
+        color: white;
+        padding: 1rem;
+        margin: -1.5rem -1.5rem 1rem -1.5rem;
+        text-align: left;
+    }
+
+    /* WEATHER EMOJI */
+
+    .weather h2::after {
+        content: " ❄️";
+    }
+
+    /* HIDE SVG ON DESKTOP */
+
+    .weather-icon {
+        display: none;
+    }
+}
