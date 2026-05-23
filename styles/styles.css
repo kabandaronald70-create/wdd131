@@ -215,12 +215,7 @@ footer {
     /* WEATHER EMOJI */
 
     .weather h2::after {
-        content: " ❄️";
+        content: " ☀️";
     }
 
-    /* HIDE SVG ON DESKTOP */
-
-    .weather-icon {
-        display: none;
-    }
 }
