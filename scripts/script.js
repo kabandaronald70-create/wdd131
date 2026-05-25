@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // WEATHER VALUES
 
-    const temperature = 2;
-    const windSpeed = 15;
+    const tempSpan = document.getElementById('temp');
+const temperature = parseFloat(tempSpan.textContent);
+const windSpeed = 15;  // this matches the displayed value
 
     // WIND CHILL FUNCTION
 
@@ -46,15 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // HAMBURGER MENU
 
-    const menuButton = document.querySelector("#menu");
-
-    const navigation = document.querySelector(".navigation");
-
     menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+    menuButton.classList.toggle("open");
+    const isOpen = menuButton.classList.contains("open");
+    menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Menu");
 
-        navigation.classList.toggle("open");
-
-        menuButton.classList.toggle("open");
 
     })
 });
