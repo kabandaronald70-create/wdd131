@@ -46,6 +46,8 @@ const windSpeed = 15;  // this matches the displayed value
         windChill;
 
     // HAMBURGER MENU
+    const menuButton = document.querySelector("#menu");
+    const navigation = document.querySelector(".navigation");
 
     menuButton.addEventListener("click", () => {
     navigation.classList.toggle("open");
