@@ -1,0 +1,259 @@
+/* ---------------------------------
+   RESET & BASE (Mobile First)
+---------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fefcf5;   /* warm off-white */
+  color: #1e2a2e;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, .logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+text-align: center;
+}
+
+/* Header & Navigation (Mobile) */
+.site-header {
+  background-color: #4B2F73;   /* deep purple */
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f8f3e6;
+  letter-spacing: 0.5px;
+}
+
+/* Hamburger button (only visible on mobile) */
+.hamburger-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f8f3e6;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+.hamburger-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Main navigation - hidden by default on mobile */
+.main-nav {
+  width: 100%;
+  display: none;          /* hidden until toggled */
+  margin-top: 1rem;
+}
+
+.main-nav.show {
+  display: block;        /* shown when hamburger clicked */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #5c3d8f;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fefcf5;
+  padding: 0.6rem 1rem;
+  border-radius: 40px;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Hover effect (required) */
+.nav-link:hover {
+  background-color: #d4a5d4;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* Main content: limited width & centered */
+.main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4B2F73;
+  border-bottom: 3px solid #4B2F73;
+  display: block;
+  padding-bottom: 0.4rem;
+  letter-spacing: -0.3px;
+}
+
+/* CSS Grid: mobile = 1 column */
+.temple-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Temple cards */
+.temple-card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.temple-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+.temple-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+}
+
+figcaption {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 500;
+  background-color: #faf7f0;
+  color: #2c3e2f;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* Footer styling – matches the clean, legible style from the example image */
+.site-footer {
+  background-color: #3b0c61;      /* light gray‑white background */
+  color:white;                 /* dark gray text for high contrast */
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #dee2e6;  /* subtle separation line */
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container p {
+  margin: 0.2rem 0;
+  line-height: 1.4;
+}
+
+/* Optional: remove the extra .footer-meta line if you want only two lines
+   (if you keep the HTML as is, you can hide the second paragraph) */
+.footer-meta {
+  display: none;   /* hides the "Built with reverence..." line */
+}
+
+/* If you prefer to keep the meta line but style it similarly, use:
+.footer-meta {
+  font-size: 0.8rem;
+  opacity: 0.75;
+  font-style: normal;
+}
+*/
+
+/* Accessibility outline – matches the new color scheme */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #6c757d;
+  outline-offset: 3px;
+}
+
+/* Responsive layout using media query */
+@media (min-width: 768px) {
+  .main-content {
+    padding: 0 2rem;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+
+/* Richer figcaption layout for the dynamic cards */
+figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+
+figcaption strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: #4B2F73;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.temple-location,
+.temple-dedicated,
+.temple-area {
+  font-size: 0.85rem;
+  color: #555;
+  display: block;
+}
+
+/* Active nav link highlight */
+.nav-link.active {
+  background-color: #d4a5d4;
+  color: #ffffff;
+}
+
+/* Empty-filter message */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #888;
+  padding: 3rem 0;
+}
