@@ -1,8 +1,4 @@
-// ============================================================
-//  Temple Album – filtered-temples.js
-//  Handles: temple data, card rendering, nav filtering,
-//           footer year/last-modified, hamburger menu
-// ============================================================
+
 
 // ---------- 1. TEMPLE DATA ARRAY ----------
 const temples = [
@@ -129,7 +125,7 @@ const filterLabels = {
 
 
 // ---------- 4. CARD BUILDER ----------
-function createTempleCard(temple) {
+function createTempleCard(temple, isLCP = false) {
   const figure = document.createElement("figure");
   figure.classList.add("temple-card");
 
@@ -142,11 +138,23 @@ function createTempleCard(temple) {
     <span class="temple-area">📐 ${temple.area.toLocaleString()} sq ft</span>
   `;
 
-  // Image with native lazy loading
+  // Image with native lazy loading (except LCP image)
   const img = document.createElement("img");
   img.src = temple.imageUrl;
   img.alt = temple.templeName;
-  img.loading = "lazy";   // ← native lazy loading
+  img.decoding = "async";
+  // prioritize the first meaningful paint image
+  if (isLCP) {
+    img.loading = "eager";
+    img.setAttribute('fetchpriority', 'high');
+    img.width = 1200;
+    img.height = 800;
+  } else {
+    img.loading = "lazy";   // native lazy loading for non-LCP images
+    img.width = 800;
+    img.height = 533;
+  }
+
   // Fallback to a local placeholder when remote URL fails
   img.onerror = () => {
     img.src = "images/hero-small.jpg";
@@ -172,8 +180,23 @@ function displayTemples(filterKey) {
   if (filtered.length === 0) {
     grid.innerHTML = `<p class="no-results">No temples match this filter.</p>`;
   } else {
-    filtered.forEach(temple => {
-      grid.appendChild(createTempleCard(temple));
+    // Remove any existing LCP preload
+    const existing = document.getElementById('lcp-preload');
+    if (existing) existing.remove();
+
+    // Preload the first image for better LCP when available
+    if (filtered.length > 0) {
+      const link = document.createElement('link');
+      link.id = 'lcp-preload';
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = filtered[0].imageUrl;
+      document.head.appendChild(link);
+    }
+
+    filtered.forEach((temple, idx) => {
+      const isLCP = idx === 0;
+      grid.appendChild(createTempleCard(temple, isLCP));
     });
   }
 
@@ -251,6 +274,15 @@ document.addEventListener("DOMContentLoaded", () => {
         hamburgerBtn.setAttribute("aria-expanded", "false");
         hamburgerBtn.textContent = "☰";
       }
+    });
+  }
+
+  // Register service worker to enable offline caching and faster repeat visits
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then(reg => {
+      // registration successful
+    }).catch(() => {
+      // ignore registration failures during development
     });
   }
 });
