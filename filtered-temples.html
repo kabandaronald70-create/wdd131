@@ -14,10 +14,10 @@
  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;600;700&display=swap"></noscript>
 
   <!-- Load full styles non-blocking -->
-  <link rel="stylesheet" href="styles/filtered-temples.css" media="print" onload="this.media='all'">
+  <link rel="preload" href="styles/filtered-temples.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="styles/filtered-temples.css"></noscript>
 
-  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="print" onload="this.media='screen and (min-width: 768px)'">
+  <link rel="preload" href="styles/filtered-temples-large.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 768px)"></noscript>
 
   <script src="scripts/filtered-temples.js" defer></script>
