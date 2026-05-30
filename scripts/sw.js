@@ -5,7 +5,15 @@ const ASSETS_TO_CACHE = [
   '/styles/filtered-temples.css',
   '/styles/filtered-temples-large.css',
   '/scripts/filtered-temples.js',
-  '/images/hero-small.jpg'
+  '/images/hero-small.jpg',
+  '/images/hero-image.jpg',
+  '/images/manti-tah-temple.webp',
+  '/images/washington-dc-temple.png',
+  '/images/salt-ake-temple.webp',
+  '/images/accra-ghana-temple.webp',
+  '/images/nauvoo-illionois-temple.jpg',
+  '/images/london-chapel.webp',
+  '/images/bern-switzerland.webp'
 ];
 
 self.addEventListener('install', event => {
