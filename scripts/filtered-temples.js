@@ -133,6 +133,15 @@ function createTempleCard(temple) {
   const figure = document.createElement("figure");
   figure.classList.add("temple-card");
 
+  // Caption block
+  const caption = document.createElement("figcaption");
+  caption.innerHTML = `
+    <strong>${temple.templeName}</strong>
+    <span class="temple-location">📍 ${temple.location}</span>
+    <span class="temple-dedicated">🕍 Dedicated: ${temple.dedicated}</span>
+    <span class="temple-area">📐 ${temple.area.toLocaleString()} sq ft</span>
+  `;
+
   // Image with native lazy loading
   const img = document.createElement("img");
   img.src = temple.imageUrl;
@@ -144,17 +153,8 @@ function createTempleCard(temple) {
     img.alt = `${temple.templeName} (image unavailable)`;
   };
 
-  // Caption block
-  const caption = document.createElement("figcaption");
-  caption.innerHTML = `
-    <strong>${temple.templeName}</strong>
-    <span class="temple-location">📍 ${temple.location}</span>
-    <span class="temple-dedicated">🕍 Dedicated: ${temple.dedicated}</span>
-    <span class="temple-area">📐 ${temple.area.toLocaleString()} sq ft</span>
-  `;
-
-  figure.appendChild(img);
   figure.appendChild(caption);
+  figure.appendChild(img);
   return figure;
 }
 
