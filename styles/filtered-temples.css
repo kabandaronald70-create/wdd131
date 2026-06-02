@@ -189,19 +189,11 @@ figcaption strong {
   line-height: 1.4;
 }
 
-/* Optional: remove the extra .footer-meta line if you want only two lines
-   (if you keep the HTML as is, you can hide the second paragraph) */
 .footer-meta {
-  display: none;   /* hides the "Built with reverence..." line */
+  display: none;   
 }
 
-/* If you prefer to keep the meta line but style it similarly, use:
-.footer-meta {
-  font-size: 0.8rem;
-  opacity: 0.75;
-  font-style: normal;
-}
-*/
+
 
 /* Accessibility outline – matches the new color scheme */
 a:focus-visible, button:focus-visible {
