@@ -24,7 +24,7 @@ const temples = [
     dedicated: "2015, June, 7",
     area: 96630,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x250/payson-utah-temple-exterior-1416671-wallpaper.jpg"
   },
   {
     templeName: "Yigo Guam",
@@ -65,7 +65,7 @@ const temples = [
     location: "Salt Lake City, Utah, United States",
     dedicated: "1893, April, 6",
     area: 253015,
-    imageUrl: "images/salt-ake-temple.webp"
+    imageUrl: "images/salt-lake-temple.webp"
   },
   {
     templeName: "Accra Ghana",
@@ -79,7 +79,7 @@ const temples = [
     location: "Nauvoo, Illinois, United States",
     dedicated: "2002, June, 27",
     area: 54000,
-    imageUrl: "images/nauvoo-illionois-temple.jpg"
+    imageUrl: "images/nauvoo-Illinois-temple.jpg"
   },
   {
     templeName: "London England",
