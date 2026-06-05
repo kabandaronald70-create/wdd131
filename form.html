@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review | TempoTech Labs</title>
+  <link rel="stylesheet" href="styles/form.css" />
+  <script src="scripts/review.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+
+  <div class="scanline"></div>
+  <div class="grid-bg"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-bracket">[</span>
+        TEMPO<span class="logo-accent">TECH</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <p class="header-sub">TEMPORAL PRODUCTS DIVISION — CUSTOMER REVIEW PORTAL</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+
+      <div class="form-header">
+        <div class="form-header-tag">DOCUMENT REF: TPD-REV-2025</div>
+        <h1>Submit Product Review</h1>
+        <p class="form-intro">Your temporal feedback helps us improve across all timelines. Fields marked <span class="req-mark">*</span> are required.</p>
+      </div>
+
+      <form method="get" action="review.html" id="reviewForm" novalidate>
+
+        <!-- Product Name -->
+        <div class="field-group">
+          <label for="productName">Product Name <span class="req-mark">*</span></label>
+          <div class="select-wrapper">
+            <select id="productName" name="productName" required>
+              <option value="" disabled selected>Select a Product ...</option>
+            </select>
+            <div class="select-arrow">▾</div>
+          </div>
+        </div>
+
+        <!-- Overall Rating -->
+        <div class="field-group">
+          <fieldset class="rating-fieldset">
+            <legend>Overall Rating <span class="req-mark">*</span></legend>
+            <p class="field-hint">Select a rating from 1 (poor) to 5 (excellent)</p>
+            <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5" required />
+              <label for="star5" title="5 stars">&#9733;</label>
+
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4" title="4 stars">&#9733;</label>
+
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3" title="3 stars">&#9733;</label>
+
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2" title="2 stars">&#9733;</label>
+
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1" title="1 star">&#9733;</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Date of Installation -->
+        <div class="field-group">
+          <label for="installDate">Date of Installation <span class="req-mark">*</span></label>
+          <input type="date" id="installDate" name="installDate" required />
+        </div>
+
+        <!-- Useful Features -->
+        <div class="field-group">
+          <fieldset class="checkbox-fieldset">
+            <legend>Useful Features</legend>
+            <p class="field-hint">Select all features you found useful</p>
+            <div class="checkbox-grid">
+              <div class="checkbox-item">
+                <input type="checkbox" id="feat-easy" name="features" value="easy-install" />
+                <label for="feat-easy">Easy Installation</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="feat-reliable" name="features" value="reliability" />
+                <label for="feat-reliable">Reliability</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="feat-perf" name="features" value="performance" />
+                <label for="feat-perf">Performance</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="feat-safe" name="features" value="safety" />
+                <label for="feat-safe">Safety Features</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="feat-value" name="features" value="value" />
+                <label for="feat-value">Value for Money</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="feat-docs" name="features" value="documentation" />
+                <label for="feat-docs">Documentation</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Written Review -->
+        <div class="field-group">
+          <label for="writtenReview">Written Review <span class="optional-tag">(optional)</span></label>
+          <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Describe your experience with the product..."></textarea>
+        </div>
+
+        <!-- User Name -->
+        <div class="field-group">
+          <label for="userName">Your Name <span class="optional-tag">(optional)</span></label>
+          <input type="text" id="userName" name="userName" placeholder="e.g. Emmett Brown" />
+        </div>
+
+        <!-- Submit -->
+        <div class="field-group submit-group">
+          <input type="submit" value="TRANSMIT REVIEW →" class="submit-btn" />
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2025 TempoTech Labs &mdash; Temporal Products Division</p>
+      <p class="footer-sub">WDD 131 &bull; Web Frontend Development I &bull; All timelines reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/form.js"></script>
+</body>
+</html>
