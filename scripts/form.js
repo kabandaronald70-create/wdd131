@@ -39,3 +39,17 @@ function populateProductSelect() {
 
 // Run on DOM ready
 document.addEventListener("DOMContentLoaded", populateProductSelect);
+   // ---------- 1. DYNAMIC FOOTER: Copyright Year & Last Modified ----------
+    const currentYearSpan = document.getElementById('currentYear');
+    const lastModifiedSpan = document.getElementById('lastModified');
+  
+    if (currentYearSpan) {
+        const currentYear = new Date().getFullYear();
+        currentYearSpan.textContent = currentYear;
+    }
+  
+    if (lastModifiedSpan) {
+        const lastModified = document.lastModified;
+        // Format: "MM/DD/YYYY HH:MM:SS" or similar, just display as is
+        lastModifiedSpan.textContent = lastModified;
+    }

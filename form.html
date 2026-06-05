@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Submit your temporal product review on TempoTech Labs’ customer portal ; choose a product, rate its performance, and share feedback to improve tomorrow’s timelines.">
+    <meta name="author" content="Ronald Kabanda">
   <title>Product Review | TempoTech Labs</title>
   <link rel="stylesheet" href="styles/form.css" />
   <script src="scripts/review.js" defer></script>
@@ -119,25 +121,24 @@
         <!-- User Name -->
         <div class="field-group">
           <label for="userName">Your Name <span class="optional-tag">(optional)</span></label>
-          <input type="text" id="userName" name="userName" placeholder="e.g. Emmett Brown" />
+          <input type="text" id="userName" name="userName" placeholder="e.g. Ronald Kabanda" />
         </div>
 
         <!-- Submit -->
         <div class="field-group submit-group">
-          <input type="submit" value="TRANSMIT REVIEW →" class="submit-btn" />
+          <input type="submit" value="SUBMIT REVIEW →" class="submit-btn" />
         </div>
 
       </form>
     </div>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <p>&copy; 2025 TempoTech Labs &mdash; Temporal Products Division</p>
-      <p class="footer-sub">WDD 131 &bull; Web Frontend Development I &bull; All timelines reserved.</p>
-    </div>
+  
+  <footer class="site-footer">
+     <div class="footer-container">
+       <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
+       <p>Last Modification: <span id="lastModified"></span></p>
+     </div>
   </footer>
-
-  <script src="scripts/form.js"></script>
 </body>
 </html>
