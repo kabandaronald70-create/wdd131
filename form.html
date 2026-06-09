@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.min.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%2300c8ff'>[</text></svg>" />
   <script src="scripts/form.min.js" defer></script>
 </head>
 <body>
@@ -43,7 +44,7 @@
         <div class="field-group">
           <label for="productName">Product Name <span class="req-mark">*</span></label>
           <div class="select-wrapper">
-            <select id="productName" name="productName" required>
+            <select id="productName" name="productName" required aria-required="true">
               <option value="" disabled selected>Select a Product ...</option>
             </select>
             <div class="select-arrow">▾</div>
@@ -55,7 +56,7 @@
           <fieldset class="rating-fieldset">
             <legend>Overall Rating <span class="req-mark">*</span></legend>
             <p class="field-hint">Select a rating from 1 (poor) to 5 (excellent)</p>
-            <div class="star-rating">
+            <div class="star-rating" role="group" aria-required="true">
               <input type="radio" id="star5" name="rating" value="5" required />
               <label for="star5" title="5 stars">&#9733;</label>
 
@@ -77,7 +78,7 @@
         <!-- Date of Installation -->
         <div class="field-group">
           <label for="installDate">Date of Installation <span class="req-mark">*</span></label>
-          <input type="date" id="installDate" name="installDate" required />
+          <input type="date" id="installDate" name="installDate" required aria-required="true" />
         </div>
 
         <!-- Useful Features -->

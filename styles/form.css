@@ -169,7 +169,7 @@ main {
   line-height: 1.6;
 }
 
-.req-mark { color: #8be8ff; font-weight: 700; }
+.req-mark { color: #ff6b35; font-weight: 700; }
 .optional-tag {
   font-size: 0.72rem;
   color: #8be8ff;
@@ -219,7 +219,7 @@ legend {
 
 .field-hint {
   font-size: 0.75rem;
-  color: #6090aa;
+  color: var(--text);
   margin-top: -0.2rem;
 }
 
@@ -427,7 +427,7 @@ footer {
 
 .confirm-container p {
   font-size: 0.9rem;
-  color: var(--text-dim);
+  color: var(--text);
   line-height: 1.7;
   margin-bottom: 0.5rem;
 }
@@ -447,7 +447,7 @@ footer {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.15em;
-  color: var(--text-dim);
+  color: var(--text);
   text-transform: uppercase;
 }
 
