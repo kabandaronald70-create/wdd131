@@ -18,7 +18,7 @@
   --text-dim:   #4a6a82;
   --text-muted: #2a4a62;
   --star-on:    #ffd700;
-  --star-off:   #1a3a5c;
+  --star-off: #5f8fb8;
   --star-glow:  0 0 10px rgba(255,215,0,0.6);
   --star-glow-soft: 0 0 10px rgba(255,215,0,0.5);
   --success:    #00ff88;
@@ -169,7 +169,10 @@ main {
   line-height: 1.6;
 }
 
-.req-mark { color: #ff6b35; font-weight: 700; }
+.req-mark {
+    color: #00c8ff;
+    font-weight: 700;
+}
 .optional-tag {
   font-size: 0.72rem;
   color: #8be8ff;
@@ -216,6 +219,7 @@ legend {
   color: var(--text-bright);
   text-transform: uppercase;
 }
+
 
 .field-hint {
   font-size: 0.75rem;
@@ -316,18 +320,23 @@ legend {
   transition: color 0.15s, text-shadow 0.15s;
   text-transform: none;
   padding: 0 0.1rem;
+  color: #8aa9c2;
 }
 
 /* Highlight hovered star and all stars before it (higher value, visual left) */
 .star-rating label:hover,
 .star-rating label:hover ~ label {
-  color: var(--star-on);
   text-shadow: var(--star-glow);
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+    color: #ffd700;
 }
 
 /* Checked state */
 .star-rating input[type="radio"]:checked ~ label {
-  color: var(--star-on);
   text-shadow: var(--star-glow-soft);
 }
 
