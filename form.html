@@ -3,145 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Submit your TempoTech Labs review; choose a product, rate its performance, and share feedback to help improve future timelines.">
-    <meta name="author" content="Ronald Kabanda">
+  <meta name="description" content="Submit your product review for TempoTech Labs. Required fields are marked with an asterisk (*).">
+  <meta name="author" content="Ronald Kabanda">
   <title>Product Review | TempoTech Labs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/form.min.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%2300c8ff'>[</text></svg>" />
-  <script src="scripts/form.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%233b82f6'>★</text></svg>">
+  <script src="scripts/form.js" defer></script>
 </head>
 <body>
+  <div class="container">
+    <header class="form-header">
+      <h1>Product Review</h1>
+      <p class="form-intro">Share your experience with TempoTech Labs products. <span class="req-mark">*</span> indicates a required field.</p>
+    </header>
 
-  <div class="scanline"></div>
-  <div class="grid-bg"></div>
-
-  <header>
-    <div class="header-inner">
-      <div class="logo">
-        <span class="logo-bracket">[</span>
-        TEMPO<span class="logo-accent">TECH</span>
-        <span class="logo-bracket">]</span>
-      </div>
-      <p class="header-sub">TEMPORAL PRODUCTS DIVISION — CUSTOMER REVIEW PORTAL</p>
-    </div>
-  </header>
-
-  <main>
-    <div class="form-container">
-
-      <div class="form-header">
-        <div class="form-header-tag">DOCUMENT REF: TPD-REV-2025</div>
-        <h1>Submit Product Review</h1>
-        <p class="form-intro">Your temporal feedback helps us improve across all timelines. Fields marked <span class="req-mark">*</span> are required.</p>
+    <form method="get" action="review.html" id="reviewForm" novalidate>
+      <!-- Product Name (required) -->
+      <div class="field-group">
+        <label for="productName">Product Name <span class="req-mark" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+        <div class="select-wrapper">
+          <select id="productName" name="productName" required aria-required="true">
+            <option value="" disabled selected>Select a Product ...</option>
+          </select>
+          <span class="select-arrow" aria-hidden="true">▼</span>
+        </div>
       </div>
 
-      <form method="get" action="review.html" id="reviewForm" novalidate>
-
-        <!-- Product Name -->
-        <div class="field-group">
-          <label for="productName">Product Name <span class="req-mark">*</span></label>
-          <div class="select-wrapper">
-            <select id="productName" name="productName" required aria-required="true">
-              <option value="" disabled selected>Select a Product ...</option>
-            </select>
-            <div class="select-arrow">▾</div>
+      <!-- Overall Rating (required) -->
+      <div class="field-group">
+        <fieldset>
+          <legend>Overall Rating <span class="req-mark" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></legend>
+          <div class="star-rating" role="group" aria-label="Rate from 1 to 5 stars">
+            <input type="radio" id="star5" name="rating" value="5" required aria-label="5 stars - Excellent">
+            <label for="star5" title="5 stars">★</label>
+            <input type="radio" id="star4" name="rating" value="4" aria-label="4 stars - Very Good">
+            <label for="star4" title="4 stars">★</label>
+            <input type="radio" id="star3" name="rating" value="3" aria-label="3 stars - Average">
+            <label for="star3" title="3 stars">★</label>
+            <input type="radio" id="star2" name="rating" value="2" aria-label="2 stars - Poor">
+            <label for="star2" title="2 stars">★</label>
+            <input type="radio" id="star1" name="rating" value="1" aria-label="1 star - Bad">
+            <label for="star1" title="1 star">★</label>
           </div>
-        </div>
+          <p class="field-hint">Select 1 (poor) to 5 (excellent)</p>
+        </fieldset>
+      </div>
 
-        <!-- Overall Rating -->
-        <div class="field-group">
-          <fieldset class="rating-fieldset">
-            <legend>Overall Rating <span class="req-mark">*</span></legend>
-            <p class="field-hint">Select a rating from 1 (poor) to 5 (excellent)</p>
-            <div class="star-rating" role="group" aria-required="true">
-              <input type="radio" id="star5" name="rating" value="5" required />
-              <label for="star5" title="5 stars">&#9733;</label>
+      <!-- Date of Installation (required) -->
+      <div class="field-group">
+        <label for="installDate">Date of Installation <span class="req-mark" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+        <input type="date" id="installDate" name="installDate" required aria-required="true">
+      </div>
 
-              <input type="radio" id="star4" name="rating" value="4" required />
-              <label for="star4" title="4 stars">&#9733;</label>
-
-              <input type="radio" id="star3" name="rating" value="3" required />
-              <label for="star3" title="3 stars">&#9733;</label>
-
-              <input type="radio" id="star2" name="rating" value="2" required />
-              <label for="star2" title="2 stars">&#9733;</label>
-
-              <input type="radio" id="star1" name="rating" value="1" required />
-              <label for="star1" title="1 star">&#9733;</label>
+      <!-- Useful Features (checkboxes) -->
+      <div class="field-group">
+        <fieldset>
+          <legend>Useful Features <span class="optional-tag">(optional)</span></legend>
+          <div class="checkbox-grid">
+            <div class="checkbox-item">
+              <input type="checkbox" id="feat-easy" name="features" value="easy-install">
+              <label for="feat-easy">Easy Installation</label>
             </div>
-          </fieldset>
-        </div>
-
-        <!-- Date of Installation -->
-        <div class="field-group">
-          <label for="installDate">Date of Installation <span class="req-mark">*</span></label>
-          <input type="date" id="installDate" name="installDate" required aria-required="true" />
-        </div>
-
-        <!-- Useful Features -->
-        <div class="field-group">
-          <fieldset class="checkbox-fieldset">
-            <legend>Useful Features</legend>
-            <p class="field-hint">Select all features you found useful</p>
-            <div class="checkbox-grid">
-              <div class="checkbox-item">
-                <input type="checkbox" id="feat-easy" name="features" value="easy-install" />
-                <label for="feat-easy">Easy Installation</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="feat-reliable" name="features" value="reliability" />
-                <label for="feat-reliable">Reliability</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="feat-perf" name="features" value="performance" />
-                <label for="feat-perf">Performance</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="feat-safe" name="features" value="safety" />
-                <label for="feat-safe">Safety Features</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="feat-value" name="features" value="value" />
-                <label for="feat-value">Value for Money</label>
-              </div>
-              <div class="checkbox-item">
-                <input type="checkbox" id="feat-docs" name="features" value="documentation" />
-                <label for="feat-docs">Documentation</label>
-              </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="feat-reliable" name="features" value="reliability">
+              <label for="feat-reliable">Reliability</label>
             </div>
-          </fieldset>
-        </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="feat-perf" name="features" value="performance">
+              <label for="feat-perf">Performance</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="feat-safe" name="features" value="safety">
+              <label for="feat-safe">Safety Features</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="feat-value" name="features" value="value">
+              <label for="feat-value">Value for Money</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="feat-docs" name="features" value="documentation">
+              <label for="feat-docs">Documentation</label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-        <!-- Written Review -->
-        <div class="field-group">
-          <label for="writtenReview">Written Review <span class="optional-tag">(optional)</span></label>
-          <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Describe your experience with the product..."></textarea>
-        </div>
+      <!-- Written Review (optional) -->
+      <div class="field-group">
+        <label for="writtenReview">Written Review <span class="optional-tag">(optional)</span></label>
+        <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Describe your experience with the product..."></textarea>
+      </div>
 
-        <!-- User Name -->
-        <div class="field-group">
-          <label for="userName">Your Name <span class="optional-tag">(optional)</span></label>
-          <input type="text" id="userName" name="userName" placeholder="e.g. Ronald Kabanda" />
-        </div>
+      <!-- User Name (optional) -->
+      <div class="field-group">
+        <label for="userName">Your Name <span class="req-mark" aria-hidden="true">*</span><span class="visually-hidden"> (required)</span></label>
+        <input type="text" id="userName" name="userName" placeholder="e.g. Ronald Kabanda">
+        <label for="userEmail">Your Email <span class="optional-tag">(optional)</span></label>
+        <input type="email" id="userEmail" name="userEmail" placeholder="e.g. ronald.kabanda@tempotech.com">
+        <label for="userPhone">Your Phone <span class="optional-tag">(optional)</span></label>
+        <input type="tel" id="userPhone" name="userPhone" placeholder="e.g. +256 743769483">
+      </div>
 
-        <!-- Submit -->
-        <div class="field-group submit-group">
-          <input type="submit" value="SUBMIT REVIEW →" class="submit-btn" />
-        </div>
+      <!-- Submit button -->
+      <div class="field-group submit-group">
+        <input type="submit" value="SUBMIT REVIEW →" class="submit-btn">
+      </div>
+    </form>
+  </div>
 
-      </form>
-    </div>
-  </main>
-
-  
   <footer class="site-footer">
-     <div class="footer-container">
-       <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
-       <p>Last Modification: <span id="lastModified"></span></p>
-     </div>
+    <div class="footer-container">
+      <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
   </footer>
 </body>
 </html>

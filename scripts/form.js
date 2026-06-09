@@ -1,12 +1,4 @@
-/**
- * TempoTech Labs — Product Review Form
- * form.js
- *
- * Responsibilities:
- *  1. Populate the Product Name <select> dynamically from the products array.
- *  2. (review.html picks up the localStorage counter logic in review.js)
- */
-
+// Product array (exactly as provided in the assignment)
 const products = [
   { id: "fc-1888", name: "flux capacitor",    averagerating: 4.5 },
   { id: "fc-2050", name: "power laces",        averagerating: 4.7 },
@@ -15,20 +7,14 @@ const products = [
   { id: "jj-1969", name: "warp equalizer",     averagerating: 5.0 }
 ];
 
-/**
- * Populate the product <select> element with options
- * built from the products array.
- * - option text  → product.name  (title-cased for display)
- * - option value → product.id
- */
 function populateProductSelect() {
   const select = document.getElementById("productName");
   if (!select) return;
 
   products.forEach(product => {
     const option = document.createElement("option");
-    option.value = product.id;
-    // Capitalise each word for nicer display
+    option.value = product.id;   // id as value
+    // Capitalize each word for display
     option.textContent = product.name
       .split(" ")
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -37,19 +23,19 @@ function populateProductSelect() {
   });
 }
 
-// Run on DOM ready
-document.addEventListener("DOMContentLoaded", populateProductSelect);
-   // ---------- 1. DYNAMIC FOOTER: Copyright Year & Last Modified ----------
-    const currentYearSpan = document.getElementById('currentYear');
-    const lastModifiedSpan = document.getElementById('lastModified');
-  
-    if (currentYearSpan) {
-        const currentYear = new Date().getFullYear();
-        currentYearSpan.textContent = currentYear;
-    }
-  
-    if (lastModifiedSpan) {
-        const lastModified = document.lastModified;
-        // Format: "MM/DD/YYYY HH:MM:SS" or similar, just display as is
-        lastModifiedSpan.textContent = lastModified;
-    }
+function setFooterDates() {
+  const yearSpan = document.getElementById("currentYear");
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+  const lastModSpan = document.getElementById("lastModified");
+  if (lastModSpan) {
+    const lastMod = new Date(document.lastModified);
+    const formatted = `${lastMod.getMonth()+1}/${lastMod.getDate()}/${lastMod.getFullYear()} ${lastMod.getHours().toString().padStart(2,'0')}:${lastMod.getMinutes().toString().padStart(2,'0')}:${lastMod.getSeconds().toString().padStart(2,'0')}`;
+    lastModSpan.textContent = formatted;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  populateProductSelect();
+  setFooterDates();
+});

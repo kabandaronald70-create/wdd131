@@ -1,69 +1,44 @@
-<!DOCTYPE html>
+/<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Review submission confirmation page for TempoTech Labs products. Your feedback has been recorded and will help improve our timeline technology.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review confirmation – your feedback has been recorded. Thank you for helping us improve.">
   <meta name="author" content="Ronald Kabanda">
   <title>Review Submitted | TempoTech Labs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@700;900&family=Exo+2:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/form.min.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%2300c8ff'>[</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%233b82f6'>✓</text></svg>">
+  <script src="scripts/review.js" defer></script>
 </head>
 <body>
+  <div class="confirm-container">
+    <div class="confirm-tag">✓ TRANSMISSION CONFIRMED</div>
+    <h1>Review Received</h1>
+    <p>Your temporal feedback has been logged. Thank you for helping us improve our products.</p>
 
-  <div class="scanline"></div>
-  <div class="grid-bg"></div>
-
-  <header>
-    <div class="header-inner">
-      <div class="logo">
-        <span class="logo-bracket">[</span>
-        TEMPO<span class="logo-accent">TECH</span>
-        <span class="logo-bracket">]</span>
+    <!-- Counter box (localStorage) -->
+    <div class="counter-box">
+      <div>
+        <div class="counter-label">Total Reviews Submitted</div>
+        <div class="counter-value" id="reviewCounter">—</div>
       </div>
-      <p class="header-sub">TEMPORAL PRODUCTS DIVISION — CUSTOMER REVIEW PORTAL</p>
+      <div class="counter-note">Tracked locally on this device</div>
     </div>
-  </header>
 
-  <main>
-    <div class="confirm-container">
+    <p class="summary-heading">Your Submission</p>
+    <div class="review-data" id="reviewSummary"></div>
 
-      <div class="confirm-tag">TRANSMISSION CONFIRMED ✓</div>
-      <h1>Review Received</h1>
-      <p>Your temporal feedback has been logged across all known timelines. Thank you for helping us improve our products.</p>
-
-      <!-- Review Counter -->
-      <div class="counter-box">
-        <div>
-          <div class="counter-label">Total Reviews Submitted</div>
-          <div class="counter-value" id="reviewCounter">—</div>
-        </div>
-        <div style="font-size:0.75rem; color:var(--text-dim); font-family:var(--font-mono); line-height:1.6;">
-          Tracked locally<br/>on this device
-        </div>
-      </div>
-
-      <!-- Submission Summary -->
-      <p style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.15em; color:var(--accent); text-transform:uppercase; margin-bottom:0.5rem;">
-        Your Submission
-      </p>
-      <div class="review-data" id="reviewSummary"></div>
-
-      <a href="form.html" class="back-link">← SUBMIT ANOTHER REVIEW</a>
-
-    </div>
-  </main>
+    <a href="form.html" class="back-link">← SUBMIT ANOTHER REVIEW</a>
+  </div>
 
   <footer class="site-footer">
-     <div class="footer-container">
-       <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
-       <p>Last Modification: <span id="lastModified"></span></p>
-     </div>
+    <div class="footer-container">
+      <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
   </footer>
-
-  <script src="scripts/review.min.js"></script>
 </body>
 </html>
