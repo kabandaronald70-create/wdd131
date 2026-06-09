@@ -27,7 +27,9 @@ function formatKey(key) {
     installDate: "Install Date",
     features: "Useful Features",
     writtenReview: "Written Review",
-    userName: "Reviewer Name"
+    userName: "Reviewer Name",
+    userEmail: "Email",
+    userPhone: "Phone"
   };
   return map[key] || key;
 }
@@ -48,7 +50,7 @@ function buildSummary(data) {
   if (!container) return;
   container.innerHTML = "";
 
-  const orderedKeys = ["productName", "rating", "installDate", "features", "writtenReview", "userName"];
+  const orderedKeys = ["productName", "rating", "installDate", "features", "writtenReview", "userName", "userEmail", "userPhone"];
   orderedKeys.forEach(key => {
     if (!(key in data)) return;
     let val = data[key];
