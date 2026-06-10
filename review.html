@@ -5,7 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Review confirmation – your feedback has been recorded. Thank you for helping us improve.">
   <meta name="author" content="Ronald Kabanda">
+  <meta name="keywords" content="product review, feedback, TempoTech Labs">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3b82f6">
   <title>Review Submitted | TempoTech Labs</title>
+  <link rel="canonical" href="https://tempotech.labs/review.html">
+  <meta property="og:title" content="Review Submitted | TempoTech Labs">
+  <meta property="og:description" content="Review confirmation – your feedback has been recorded. Thank you for helping us improve.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tempotech.labs/review.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Review Submitted | TempoTech Labs">
+  <meta name="twitter:description" content="Review confirmation – your feedback has been recorded. Thank you for helping us improve.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" as="style">
@@ -15,7 +26,7 @@
   <script src="scripts/review.js" defer></script>
 </head>
 <body>
-  <div class="confirm-container">
+  <main class="confirm-container">
     <div class="confirm-tag" role="status" aria-live="polite">✓ TRANSMISSION CONFIRMED</div>
     <h1>Review Received</h1>
     <p>Your temporal feedback has been logged. Thank you for helping us improve our products.</p>
@@ -29,17 +40,31 @@
       <div class="counter-note">Tracked locally on this device</div>
     </div>
 
-    <p class="summary-heading">Your Submission</p>
+    <h2 class="summary-heading">Your Submission</h2>
     <div class="review-data" id="reviewSummary" aria-live="polite" aria-label="Submitted review data"></div>
 
     <a href="form.html" class="back-link">← SUBMIT ANOTHER REVIEW</a>
-  </div>
+  </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="footer-container">
       <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
       <p>Last Modification: <span id="lastModified"></span></p>
     </div>
   </footer>
-</body>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Review Submitted",
+    "description": "Review confirmation – your feedback has been recorded. Thank you for helping us improve.",
+    "url": "https://tempotech.labs/review.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TempoTech Labs",
+      "url": "https://tempotech.labs"
+    }
+  }
+  </script></body>
 </html>
