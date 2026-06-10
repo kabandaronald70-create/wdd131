@@ -216,20 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (currentYearSpan) currentYearSpan.textContent = new Date().getFullYear();
   if (lastModifiedSpan) {
-    const lm = document.lastModified;
-    if (lm && lm !== '') {
-      lastModifiedSpan.textContent = lm;
-    } else {
-      // Fallback: try a HEAD request to read the server's Last-Modified header
-      fetch(window.location.href, { method: 'HEAD', cache: 'no-store' })
-        .then(res => res.headers.get('last-modified'))
-        .then(h => {
-          lastModifiedSpan.textContent = h || 'Unknown';
-        })
-        .catch(() => {
-          lastModifiedSpan.textContent = 'Unknown';
-        });
-    }
+    lastModifiedSpan.textContent = document.lastModified || 'Unknown';
   }
 
   // --- Initial render: show all temples ---
@@ -270,12 +257,17 @@ document.addEventListener("DOMContentLoaded", () => {
       hamburgerBtn.textContent = isExpanded ? "☰" : "✕";
     });
 
+    // Debounced resize listener to prevent layout thrashing
+    let resizeTimeout;
     window.addEventListener("resize", () => {
-      if (window.innerWidth >= 768) {
-        mainNav.classList.remove("show");
-        hamburgerBtn.setAttribute("aria-expanded", "false");
-        hamburgerBtn.textContent = "☰";
-      }
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        if (window.innerWidth >= 768) {
+          mainNav.classList.remove("show");
+          hamburgerBtn.setAttribute("aria-expanded", "false");
+          hamburgerBtn.textContent = "☰";
+        }
+      }, 150);
     });
   }
 
