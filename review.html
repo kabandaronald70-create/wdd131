@@ -8,28 +8,29 @@
   <title>Review Submitted | TempoTech Labs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css">
    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Ctext%20y=%2775%27%20font-size=%2775%27%20fill=%27%233b82f6%27%3E%E2%98%85%3C/text%3E%3C/svg%3E">
   <script src="scripts/review.js" defer></script>
 </head>
 <body>
   <div class="confirm-container">
-    <div class="confirm-tag">✓ TRANSMISSION CONFIRMED</div>
+    <div class="confirm-tag" role="status" aria-live="polite">✓ TRANSMISSION CONFIRMED</div>
     <h1>Review Received</h1>
     <p>Your temporal feedback has been logged. Thank you for helping us improve our products.</p>
 
     <!-- Counter box (localStorage) -->
-    <div class="counter-box">
+    <div class="counter-box" aria-label="Review counter statistics">
       <div>
-        <div class="counter-label">Total Reviews Submitted</div>
-        <div class="counter-value" id="reviewCounter">—</div>
+        <div class="counter-label" id="counterLabel">Total Reviews Submitted</div>
+        <div class="counter-value" id="reviewCounter" aria-labelledby="counterLabel">—</div>
       </div>
       <div class="counter-note">Tracked locally on this device</div>
     </div>
 
     <p class="summary-heading">Your Submission</p>
-    <div class="review-data" id="reviewSummary"></div>
+    <div class="review-data" id="reviewSummary" aria-live="polite" aria-label="Submitted review data"></div>
 
     <a href="form.html" class="back-link">← SUBMIT ANOTHER REVIEW</a>
   </div>
