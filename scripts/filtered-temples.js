@@ -142,6 +142,7 @@ function createTempleCard(temple, isLCP = false) {
   const img = document.createElement("img");
   img.src = temple.imageUrl;
   img.alt = temple.templeName;
+  img.crossOrigin = "anonymous";
   img.decoding = "async";
   // prioritize the first meaningful paint image
   if (isLCP) {
@@ -191,6 +192,7 @@ function displayTemples(filterKey) {
       link.rel = 'preload';
       link.as = 'image';
       link.href = filtered[0].imageUrl;
+      link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     }
 

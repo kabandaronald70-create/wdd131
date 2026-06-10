@@ -155,23 +155,6 @@ text-align: center;
   aspect-ratio: 3 / 2;
 }
 
-figcaption {
-  padding: 1rem;
-  text-align: center;
-  font-weight: 500;
-  background-color: #faf7f0;
-  color: #2c3e2f;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-}
-
-figcaption strong {
-  display: block;
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-}
-
 /* Footer styling – matches the clean, legible style from the example image */
 .site-footer {
   background-color: #3b0c61;      /* light gray‑white background */
@@ -188,11 +171,6 @@ figcaption strong {
   margin: 0.2rem 0;
   line-height: 1.4;
 }
-
-.footer-meta {
-  display: none;   
-}
-
 
 
 /* Accessibility outline – matches the new color scheme */
@@ -241,8 +219,7 @@ figcaption span {
 
 .temple-location,
 .temple-dedicated,
-.temple-area,
-.temple-name {
+.temple-area {
   font-size: 0.85rem;
   color: #555;
   display: block;
