@@ -303,7 +303,28 @@ footer {
   margin: 2rem 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-button:focus, a:focus {
+/* Ensure focus ring is visible for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid #D98A2C;
+  outline-offset: 2px;
+}
+
+/* For browsers that don't support focus-visible */
+button:focus, a:focus, input:focus, textarea:focus, select:focus {
   outline: 2px solid #D98A2C;
   outline-offset: 2px;
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #1B4D3E;
+  color: #FDF9F0;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  top: 0;
 }
