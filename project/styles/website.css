@@ -282,7 +282,7 @@ footer {
   }
 }
 .hero-small {
-  background: linear-gradient(rgba(27,77,62,0.8), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/2693820/uganda-landscape.jpg?auto=compress&cs=tinysrgb&w=1200&h=300&fit=crop');
+  background: linear-gradient(rgba(27,77,62,0.8), rgba(0,0,0,0.6)), url('image/landscape.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
