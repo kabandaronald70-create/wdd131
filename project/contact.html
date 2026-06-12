@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Uganda Untamed experts. Get help crafting your dream gorilla trekking or wildlife safari in Uganda.">
+  <meta name="author" content="Ronald Kabanda">
+  <title>Uganda Untamed | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/website.css">
+  <script defer src="script/website.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🦍 UGANDA UNTAMED 🦣</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="plan.html">Plan</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <h1>Let's start your journey</h1>
+      <p>Our local experts are ready to help you craft an unforgettable Ugandan experience.</p>
+    </section>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>📍 Uganda Untamed Office</h3>
+        <p>Kampala, Uganda • Plot 14, Acacia Avenue</p>
+        <p>📞 +256 700 123 456</p>
+        <p>✉️ hello@ugandauntamed.ug</p>
+        <div class="social-links">
+          <span>🐦 Twitter</span> <span>📘 Facebook</span> <span>📸 Instagram</span>
+        </div>
+      </div>
+      <div class="contact-fun-fact">
+        <h3>✨ Did you know?</h3>
+        <p id="randomFact">Loading facts...</p>
+        <button id="newFactBtn" class="btn-accent">Show another fact</button>
+      </div>
+    </div>
+
+    <!-- dynamic demo: show latest saved itinerary from localStorage -->
+    <div class="mini-itinerary">
+  <h3>🧾 My saved attractions <span id="miniCount">(0)</span></h3>
+  <div id="miniSavedList"></div>
+  <button id="clearMiniBtn" class="btn-accent" style="margin-top: 1rem; padding: 0.3rem 1rem;">🗑️ Clear all</button>
+</div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+      <p><a href="references.html" class="ref-link">📚 References & citations</a></p>
+    </div>
+  </footer>
+</body>
+</html>

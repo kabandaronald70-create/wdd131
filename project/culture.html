@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience Uganda's living heritage: Rolex street food, Matoke, traditional dances, and Kasubi Tombs. Feel the culture.">
+  <meta name="author" content="Ronald Kabanda">
+  <title>Uganda Untamed | Culture & Traditions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/website.css">
+  <script defer src="script/website.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🦍 UGANDA UNTAMED 🦣</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="culture.html" class="active">Culture</a></li>
+        <li><a href="plan.html">Plan</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="itinerary-badge" id="itineraryBadge">
+      📌 My Itinerary: <span id="itineraryCount">0</span> saved experiences
+    </div>
+
+    <section class="hero-small">
+      <h1>Living Heritage of Uganda</h1>
+      <p>From delicious street food to vibrant dances – experience the soul of the Pearl of Africa.</p>
+    </section>
+
+    <section class="featured">
+      <h2>Cultural Treasures</h2>
+      <div class="cards-grid">
+        <!-- Rolex card -->
+        <div class="card">
+          <img src="image/rolex.webp" alt="Ugandan Rolex street food" loading="lazy" class="card-img">
+          <div class="card-body">
+            <h3>Rolex</h3>
+            <p class="location">Street food – nationwide</p>
+            <p>Rolex is a beloved Ugandan snack made by rolling eggs and fresh vegetables inside a chapati. It's tasty, affordable, and a must‑try for any visitor.</p>
+            <button class="btn-save" data-id="rolex" data-name="Rolex food experience" data-location="Kampala streets">🗺️ Save to my plan</button>
+          </div>
+        </div>
+        <!-- Matoke card -->
+        <div class="card">
+          <img src="image/matooke.webp" alt="Matoke green bananas" loading="lazy" class="card-img">
+          <div class="card-body">
+            <h3>Matoke</h3>
+            <p class="location">Traditional staple</p>
+            <p>Steamed green bananas mashed and served with groundnut sauce, meat, or beans. Matoke is the heart of Ugandan home cooking and communal meals.</p>
+            <button class="btn-save" data-id="matooke" data-name="Matoke traditional dish" data-location="Ugandan homes">🗺️ Save to my plan</button>
+          </div>
+        </div>
+        <!-- Traditional Dance card -->
+        <div class="card">
+          <img src="image/traditional-dance.webp" alt="Ugandan traditional dance" loading="lazy" class="card-img">
+          <div class="card-body">
+            <h3>Traditional Dance</h3>
+            <p class="location">Ceremonies & festivals</p>
+            <p>Each tribe has unique dances – from the energetic Bakisimba to the royal Ekitaguriro. Drums, songs, and colorful regalia celebrate Uganda's unity in diversity.</p>
+            <button class="btn-save" data-id="dance" data-name="Traditional dance performance" data-location="Cultural centres">🗺️ Save to my plan</button>
+          </div>
+        </div>
+        <!-- Kasubi Tombs (extra cultural heritage) -->
+        <div class="card">
+          <img src="image/kasubi-tombs.webp" alt="Kasubi Tombs" loading="lazy" class="card-img">
+          <div class="card-body">
+            <h3>Kasubi Tombs</h3>
+            <p class="location">Kampala</p>
+            <p>UNESCO World Heritage site, the royal burial ground of Buganda kings. A masterpiece of architectural and spiritual significance.</p>
+            <button class="btn-save" data-id="kasubi" data-name="Kasubi Tombs" data-location="Kampala">🗺️ Save to my plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+      <p><a href="references.html" class="ref-link">📚 References & citations</a></p>
+    </div>
+  </footer>
+
+  
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Uganda's top attractions: Equator, Sipi Falls, Bwindi gorillas, Murchison Falls. Start your journey now.">
+  <meta name="author" content="Ronald Kabanda">
+  <title>Uganda Untamed | Tourist Attractions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/website.css">
+  <script defer src="script/website.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🦍 UGANDA UNTAMED 🦣</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attractions.html" class="active">Attractions</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="plan.html">Plan</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="itinerary-badge" id="itineraryBadge">
+      📌 My Itinerary: <span id="itineraryCount">0</span> saved experiences
+    </div>
+
+    <section class="hero-small">
+      <h1>Uganda’s Must‑See Attractions</h1>
+      <p>From the equator line to misty waterfalls — every corner tells a wild story.</p>
+    </section>
+
+    <section class="featured">
+      <h2>Featured Attractions</h2>
+      <div class="cards-grid">
+        <!-- Equator card -->
+        <div class="card">
+          <img src="image/equator-line.webp" alt="Equator line in Uganda" loading="lazy" class="card-img">
+          <div class="card-body">
+            <h3>Equator</h3>
+            <p class="location">Kayabwe, Central Uganda</p>
+            <p>The Uganda Equator is a famous tourist attraction where you can stand in both hemispheres. Watch water experiments, take photos, and buy unique souvenirs.</p>
+            <button class="btn-save" data-id="eq1" data-name="Equator Kayabwe" data-location="Kayabwe">🗺️ Save to my plan</button>
+          </div>
+        </div>
+        <!-- Wildlife card -->
+        <div class="card">
+          <img src="image/giraffes.webp" alt="Giraffes in Uganda" loading="lazy" class="card-img">
+          <div class="card-body">
+            <h3>Wildlife Safari</h3>
+            <p class="location">National Parks across Uganda</p>
+            <p>Uganda is home to gorillas, lions, elephants, giraffes, and over 1,000 bird species. Visit Bwindi, Murchison Falls, or Queen Elizabeth NP for unforgettable encounters.</p>
+            <button class="btn-save" data-id="wild1" data-name="Uganda Wildlife Safari" data-location="Multiple parks">🗺️ Save to my plan</button>
+          </div>
+        </div>
+          <!-- kasubi tomb card -->
+           <div class="card">
+  <img src="image/kasubi-tombs.webp" alt="Kasubi Tombs UNESCO site" loading="lazy" class="card-img">
+  <div class="card-body">
+    <h3>Kasubi Tombs</h3>
+    <p class="location">Kampala, Uganda</p>
+    <p>A UNESCO World Heritage site, the Kasubi Tombs are the royal burial grounds of the Buganda kings. This sacred site showcases traditional Ganda architecture made of wood, thatch, and reeds, and is a living cultural treasure.</p>
+    <button class="btn-save" data-id="kasubi" data-name="Kasubi Tombs" data-location="Kampala">🗺️ Save to my plan</button>
+  </div>
+</div>
+        <!-- Bwindi Impenetrable Forest (extra) -->
+        <div class="card">
+          <img src="image/gorilla-treking.webp" alt="Gorilla trekking Bwindi" loading="lazy" class="card-img">
+          <div class="card-body">
+            <h3>Bwindi Mountain Gorillas</h3>
+            <p class="location">Southwestern Uganda</p>
+            <p>Home to half of the world's mountain gorillas. A once‑in‑a‑lifetime trekking experience deep in the ancient jungle.</p>
+            <button class="btn-save" data-id="bwindi" data-name="Bwindi Gorilla Trek" data-location="Bwindi">🗺️ Save to my plan</button>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="currentYear"></span> ❤️ Ronald Kabanda ❤️ Uganda ❤️</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+      <p><a href="references.html" class="ref-link">📚 References & citations</a></p>
+    </div>
+  </footer>
+</body>
+</html>

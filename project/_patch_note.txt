@@ -1,0 +1,3 @@
+Patch: update image paths in project/*.html to ../images/
+Files changed: project/index.html, project/attractions.html, project/culture.html
+Reason: project pages reference images/ at repo root; ../images points to repo-root images folder.
